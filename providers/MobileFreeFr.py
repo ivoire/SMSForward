@@ -7,7 +7,6 @@ class MobileFreeFr(provider.Provider):
     def __init__(self, cfg):
         self.user = cfg['user']
         self.token = cfg['token']
-        pass
 
     def send_message(self, message):
         params = {'user': self.user,
