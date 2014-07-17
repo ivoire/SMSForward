@@ -20,16 +20,11 @@ Installing
 
 SMSForward can be installed directly from PyPI:
 
-.. code-block::
-
     pip install SMSForward
 
 or from the sources
 
-.. code-block::
-
     git clone https://github.com/ivoire/SMSForward
-
     pip install -r requirements.txt
 
 
