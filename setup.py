@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Copyright 2014 Rémi Duraffort
 # This file is part of SMSForward.
 #
