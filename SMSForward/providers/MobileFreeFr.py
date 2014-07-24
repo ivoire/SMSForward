@@ -32,7 +32,7 @@ class MobileFreeFr(provider.Provider):
                   'msg': message}
         try:
             response = requests.get("https://smsapi.free-mobile.fr/sendmsg", params=params, verify=False)
-        except exceptions.RequestException:
+        except requests.exceptions.RequestException:
             raise RuntimeError
 
         if response.status_code == 200:
