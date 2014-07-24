@@ -19,7 +19,7 @@
 
 import argparse
 
-import providers
+from SMSForward import providers
 
 
 def main():
