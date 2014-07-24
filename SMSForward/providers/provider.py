@@ -22,3 +22,13 @@ class Provider(object):
 
     def send_message(self, message):
         raise NotImplementedError
+
+
+class ConfigError(Exception):
+    pass
+
+class FloodError(Exception):
+    pass
+
+class ServerError(Exception):
+    pass

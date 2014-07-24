@@ -30,5 +30,18 @@ class MobileFreeFr(provider.Provider):
         params = {'user': self.user,
                   'pass': self.token,
                   'msg': message}
-        response = requests.get("https://smsapi.free-mobile.fr/sendmsg", params=params, verify=False)
-        return response
+        try:
+            response = requests.get("https://smsapi.free-mobile.fr/sendmsg", params=params, verify=False)
+        except exceptions.RequestException:
+            raise RuntimeError
+
+        if response.status_code == 200:
+            return
+        elif response.status_code == 400:
+            raise provider.ConfigError
+        elif response.status_code == 402:
+            raise provider.FloodError
+        elif response.status_code == 403:
+            raise provider.ConfigError
+        elif response.status_code == 500:
+            raise provider.ServerError
