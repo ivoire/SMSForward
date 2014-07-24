@@ -24,8 +24,8 @@ setup(name='SMSForward',
       author='Remi Duraffort',
       author_email='remi.duraffort@gmail.com',
       url='https://github.com/ivoire/SMSForward',
-      scripts=['SMSForward.py'],
-      packages=['SMSForward'],
+      scripts=['send-sms'],
+      packages=['SMSForward', 'SMSForward.providers'],
       install_requires=['requests'],
       license="GPL"
      )

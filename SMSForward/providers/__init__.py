@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with SMSForward.  If not, see <http://www.gnu.org/licenses/>.
 
-import MobileFreeFr
+from . import MobileFreeFr
 
 def create(name, cfg):
     if name == 'mobile.free.fr':
